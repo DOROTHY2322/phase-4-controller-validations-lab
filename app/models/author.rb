@@ -1,2 +1,6 @@
 class Author < ApplicationRecord
-end
+    validates :name, presence: true
+    validates :email, presence: true, uniqueness: { case_sensitive: false }
+    # ...
+  end
+  
